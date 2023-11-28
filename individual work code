@@ -1,0 +1,24 @@
+import random
+import numpy as np
+def printList(lst):
+    for i in range(len(lst)):
+        for j in range(len(lst[i])):
+            print(lst[i][j], end='    ')
+        print()
+n = 5
+m = 6
+a = []
+b = []
+max_elements = []
+for i in range(n):
+    a.append([])
+    for j in range(m):
+        a[i].append(random.randint(1,9))
+printList(a)
+print('')
+for i in range(n):
+    b.append(a[i])
+for c in range(n):
+    maxelement = max(b[c])
+    max_elements.append(maxelement)
+print('Yeni massiv',np.array(max_elements))
